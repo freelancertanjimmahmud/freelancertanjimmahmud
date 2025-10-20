@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanjim Mahmud - Cybersecurity Specialist & Entrepreneur</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the expertise list */
+        .expertise-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+        .expertise-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #38bdf8; /* Sky-400 */
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-blue': '#38bdf8', // Sky-400
+                        'bg-dark': '#111827',     // Gray-900
+                        'card-dark': '#1f2937',   // Gray-800
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-bg-dark text-gray-200 font-sans min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-7xl mx-auto shadow-2xl rounded-xl overflow-hidden bg-card-dark border border-gray-700">
+
+        <!-- Header Section -->
+        <header class="p-8 md:p-12 bg-gray-900 text-center relative">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-2">Dr. Tanjim Mahmud</h1>
+            <h2 class="text-xl sm:text-2xl font-semibold text-primary-blue mb-6">
+                Cyber Security Expert & AI Chatbot Maker
+            </h2>
+            <!-- Removed the quote about "World's No. 1 Facebook Account Recovery Expert" as requested -->
+            <div class="mt-8">
+                <a href="#expertise" class="inline-block px-8 py-3 bg-primary-blue text-gray-900 font-bold rounded-full shadow-lg hover:bg-sky-500 transition duration-300 transform hover:scale-105">
+                    Click Here
+                </a>
+            </div>
+        </header>
+
+        <main class="grid lg:grid-cols-3 gap-8 p-6 md:p-10">
+
+            <!-- Column 1: Personal & Education -->
+            <section class="lg:col-span-1 space-y-8">
+
+                <!-- Personal & Background Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 border-b border-gray-700 pb-2">Personal & Education</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><span class="font-semibold text-white">Place of Birth:</span> Chittagong (now Chattogram), Bangladesh</li>
+                        <li><span class="font-semibold text-white">Nationality:</span> Bangladeshi</li>
+                        <li><span class="font-semibold text-white">Education:</span>
+                            <ul class="pl-4 pt-1 list-disc list-inside space-y-1 text-sm text-gray-400">
+                                <li>Bakalia Grammar School (2012 – 2016)</li>
+                                <li>Chittagong Collegiate School (2017 – 2025)</li>
+                                <li>HSC Candidate 2025</li>
+                                <li>Expected to study at Dhaka Medical College</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Academic Achievements Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 border-b border-gray-700 pb-2">Academic Achievements</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-yellow-400 mr-2 text-xl">⭐</span>
+                            <div>
+                                <span class="font-semibold text-white">Golden A+ (GPA 5.00) in SSC Exam 2023.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-400 mr-2 text-xl">🏆</span>
+                            <div>
+                                Ranked 12th in the Government School Admission Test (Chattogram Collegiate School Merit List).
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Freelance Platforms -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 border-b border-gray-700 pb-2">Freelancing Platforms</h3>
+                    <p class="text-gray-300">I actively work on multiple international freelancing platforms:</p>
+                    <div class="flex flex-wrap gap-3 mt-3">
+                        <span class="bg-green-700 text-white text-sm px-3 py-1 rounded-full font-medium">Fiverr</span>
+                        <span class="bg-sky-700 text-white text-sm px-3 py-1 rounded-full font-medium">Upwork</span>
+                        <span class="bg-red-700 text-white text-sm px-3 py-1 rounded-full font-medium">Freelancer.com</span>
+                        <span class="bg-yellow-700 text-white text-sm px-3 py-1 rounded-full font-medium">Guru.com</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Column 2 & 3: Professional Identity & Expertise -->
+            <section class="lg:col-span-2 space-y-8">
+
+                <!-- Professional Identity Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 border-b border-gray-700 pb-2">Professional Identity & Focus</h3>
+                    
+                    <p class="text-gray-300 mb-4">
+                        Hi! I'm Tanjim Mahmud, a digital solutions expert specializing in AI, cybersecurity, and graphics design. I help businesses grow with smart, secure, and creative solutions.
+                    </p>
+                    <div class="space-y-3 mt-4">
+                        <div class="flex items-start space-x-2">
+                            <span class="text-xl text-primary-blue pt-0.5">🤖</span>
+                            <p class="text-gray-300"><strong class="text-white">AI & Prompt Engineering:</strong> Build custom AI assistants for automation, efficiency, and better user experiences.</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <span class="text-xl text-primary-blue pt-0.5">🎨</span>
+                            <p class="text-gray-300"><strong class="text-white">Graphics Design:</strong> Create logos, banners, and visuals that make brands stand out.</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <span class="text-xl text-primary-blue pt-0.5">🛡️</span>
+                            <p class="text-gray-300"><strong class="text-white">Social Media Support:</strong> Solve login/setup issues and secure your accounts.</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <span class="text-xl text-primary-blue pt-0.5">🔒</span>
+                            <p class="text-gray-300"><strong class="text-white">Cybersecurity:</strong> Protect your data with 2FA, password safety, and expert online security tips.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-white mt-6 mb-3">Founder & CEO of:</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-gray-700 rounded-md">
+                            <h5 class="font-bold text-lg text-primary-blue">AtoZ Academy</h5>
+                            <p class="text-sm text-gray-300">Bangladesh’s first AI & VR-based EdTech platform.</p>
+                        </div>
+                        <div class="p-4 bg-gray-700 rounded-md">
+                            <h5 class="font-bold text-lg text-primary-blue">AtoZ Publications Ltd.</h5>
+                            <p class="text-sm text-gray-300">Leading the future of publishing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-4 bg-gray-700 rounded-md">
+                        <h5 class="font-bold text-lg text-primary-blue">Dr. Tanjim Mahmud Foundation</h5>
+                        <p class="text-sm text-gray-300">A social organization promoting early, dowry-free marriages and social awareness.</p>
+                    </div>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 border-b border-gray-700 pb-2">Our Mission</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        To empower individuals and businesses with innovative AI solutions, strong cybersecurity, professional graphics design, and expert Facebook recovery services. Delivering secure, creative, and reliable digital growth with 100% professionalism and confidentiality.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Expertise Section (Full Width) -->
+        <section id="expertise" class="p-6 md:p-10 bg-gray-900 border-t border-gray-700">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Professional Expertise: Facebook Account Recovery Services</h3>
+                <!-- MODIFIED: Removed fire emoji -->
+                <p class="text-xl text-primary-blue mt-2">
+                    Have you faced any issues with your Facebook account?
+                </p>
+                <!-- MODIFIED: Updated helper line text and name reference -->
+                <p class="text-gray-400 mt-1">
+                    If your Facebook account has been hacked, locked, disabled, or restricted? Don’t worry! Freelancer Tanjim Mahmud is here to help you!
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <ul class="expertise-list grid md:grid-cols-2 gap-x-8 gap-y-4 text-gray-300 text-lg">
+                <li class="font-semibold"><span class="text-white">Two-Factor Authentication (2FA) Bypass:</span> Recover ID if you're unable to log in or not receiving your 2FA code.</li>
+                <li class="font-semibold"><span class="text-white">Hacked ID Recovery:</span> Recover hacked Facebook accounts and regain full access safely.</li>
+                <li class="font-semibold"><span class="text-white">Community Standards Disabled Account Recovery:</span> Restore accounts disabled due to alleged community standards violations.</li>
+                <li class="font-semibold"><span class="text-white">Locked ID Unlock:</span> Unlock accounts locked due to suspicious activity, reports, or security updates.</li>
+                <li class="font-semibold"><span class="text-white">ID Verification & Recovery:</span> Recover your account when Facebook rejects your submitted ID for verification.</li>
+                <li class="font-semibold"><span class="text-white">Meta Blue Verification Assistance:</span> Get professional help to verify your Facebook Profile or Page with the official Blue Badge.</li>
+                <li class="font-semibold"><span class="text-white">Get Started Unlock:</span> Fix “Get Started” stuck accounts that prevent new users from accessing their profiles.</li>
+                <li class="font-semibold"><span class="text-white">Approve Lock Removal:</span> Remove “Approve Your Login” locks when you can’t approve from another device.</li>
+                <li class="font-semibold"><span class="text-white">Remembering ID Recovery:</span> Recover Facebook accounts wrongly marked as “Remembering” (deceased).</li>
+                <li class="font-semibold"><span class="text-white">Suspended Account Recovery:</span> Restore temporarily suspended Facebook accounts.</li>
+                <li class="font-semibold"><span class="text-white">Page/Profile Issue & Restriction Removal:</span> Fix problems with likes, comments, posts, or monetization restrictions.</li>
+                <li class="font-semibold"><span class="text-white">Account Name Change Problem Fix:</span> Assist in changing names when Facebook wrongly denies your request.</li>
+            </ul>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="p-6 text-center text-gray-500 text-sm bg-gray-900 border-t border-gray-700">
+            &copy; 2025 Dr. Tanjim Mahmud. All Rights Reserved.
+        </footer>
+
+    </div>
+
+</body>
+</html>
