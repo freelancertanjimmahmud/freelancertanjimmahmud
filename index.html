@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Tanjim Mahmud - AI Powered</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a192f;
+            --text-color: #ffffff;
+            --accent-color: #0099ff;
+            --light-gray: #e0e0e0;
+            --yellow-color: #ffc107;
+            --card-bg: #112240;
+            --input-bg: #1a3455;
+            --success-color: #38c172;
+            --error-color: #e3342f;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: flex-start;
+        }
+
+        /* --- Global Layout --- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            padding: 0 0 50px 0;
+        }
+
+        /* --- Top Banner & Navigation (Original Styles) --- */
+        .top-banner {
+            width: 100%;
+            background-color: var(--yellow-color);
+            color: #000;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+            margin-right: 5px;
+            font-size: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--light-gray);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-button {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #0077cc;
+        }
+
+        /* --- Hero Section (Original Styles) --- */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .main-headline {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .highlight-text {
+            color: var(--accent-color);
+        }
+
+        .sub-headline {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--light-gray);
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .hero-button {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 15px 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            margin-bottom: 40px;
+        }
+
+        .hero-button:hover {
+            background-color: #0077cc;
+        }
+
+        .trust-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .rating {
+            font-size: 22px;
+            color: var(--yellow-color);
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        .loved-by {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--light-gray);
+            margin-top: 5px;
+        }
+
+        /* --- NEW AI Tools Section Styles --- */
+        .ai-tools-section {
+            padding: 60px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between; 
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tool-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            flex: 1 1 30%; 
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 153, 255, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-card h2 {
+            color: var(--accent-color);
+            margin-top: 0;
+            font-size: 24px;
+            border-bottom: 2px solid var(--input-bg);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tool-card p {
+            font-size: 14px;
+            color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+
+        .tool-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tool-input-group input,
+        .tool-input-group textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--accent-color);
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        .tool-button {
+            background-color: var(--yellow-color);
+            color: #000;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .tool-button:hover {
+            background-color: #ffda4a;
+        }
+
+        .tool-button:active {
+            transform: scale(0.98);
+        }
+
+        .tool-button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+
+        .result-area {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: var(--input-bg);
+            border: 1px dashed var(--light-gray);
+            min-height: 100px;
+            overflow-y: auto;
+            max-height: 350px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top: 4px solid var(--yellow-color);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: none;
+            margin: 10px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .citation {
+            font-size: 12px;
+            color: var(--accent-color);
+            margin-top: 10px;
+            display: block;
+        }
+
+        .chatbot-idea strong, .design-concept strong {
+            color: var(--accent-color);
+        }
+
+        .design-concept {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid var(--yellow-color);
+            background-color: #1a3455;
+            border-radius: 4px;
+        }
+
+        .color-swatch-container {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .color-swatch {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid var(--light-gray);
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        /* --- Media Queries for Responsiveness (Original + New) --- */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-link, .nav-button {
+                margin: 5px 10px;
+            }
+
+            .main-headline {
+                font-size: 40px;
+            }
+
+            .sub-headline {
+                font-size: 18px;
+            }
+
+            .ai-tools-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .tool-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        Special Offer! Get 20% off for buying your own customized AI Chatbot!
+    </div>
+    
+    <div class="container">
+        <header class="navbar">
+            <div class="logo">
+                <span>🚀</span> Freelancer Tanjim Mahmud
+            </div>
+            <nav class="nav-links">
+                <a href="Cyber Security.htm" class="nav-link">Cyber Security</a>
+                <a href="AI Chatbots.htm" class="nav-link">AI Chatbots</a>
+                <a href="Graphics Design.htm" class="nav-link">Graphics Design</a>
+                <a href="About Me.htm" class="nav-link">About Me</a>
+                <a href="https://wa.me/+8801410051206" class="nav-button">Contact Me</a>
+            </nav>
+        </header>
+
+        <main class="hero-section">
+            <h1 class="main-headline">
+                I am <span class="highlight-text">Freelancer Tanjim Mahmud</span>. Globally recognized as a Cyber Security Expert, AI Chatbot Maker, and Graphics Designer.
+            </h1>
+
+            <p class="sub-headline">
+                Need to recover your social media account? Want a custom AI Chatbot like ChatGPT or Gemini? Or stylish, creative thumbnails and banners? You are in the right place to get a professional solution!
+            </p>
+
+            <a href="https://facebook.com/freelancertanjimmahmud" class="hero-button">Click Here To See My Portfolio</a>
+
+            <div class="trust-section">
+                <div class="loved-by">Trusted by millions of users</div>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+            </div>
+        </main>
+
+        <section class="ai-tools-section">
+
+            <div class="tool-card">
+                <h2>Cyber Security Analyst 🔒</h2>
+                <p>Get real-time, expert security advice grounded in the latest web information. Stay ahead of threats!</p>
+                
+                <div class="tool-input-group">
+                    <input type="text" id="security-query" placeholder="e.g., How to prevent phishing attacks on mobile?" />
+                </div>
+                
+                <button class="tool-button" id="get-security-advice">
+                    ✨ Get Latest Security Advice
+                </button>
+                
+                <div class="loading-spinner" id="security-spinner"></div>
+                <div class="result-area" id="security-result">
+                    Advice will appear here...
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <h2>AI Chatbot Idea Generator 🤖</h2>
+                <p>Generate high-value, structured chatbot concepts for your business goal.</p>
+                
+                <div class="tool-input-group">
+                    <textarea id="chatbot-goal" placeholder="e.g., Reduce customer support load by 40% and increase lead qualification rate." rows="3"></textarea>
+                </div>
+                
+                <button class="tool-button" id="generate-chatbot-ideas">
+                    ✨ Generate Chatbot Ideas
+                </button>
+                
+                <div class="loading-spinner" id="chatbot-spinner"></div>
+                <div class="result-area" id="chatbot-result">
+                    Structured ideas will appear here...
+                </div>
+            </div>
+            
+            <div class="tool-card">
+                <h2>Design Brief Generator 🎨</h2>
+                <p>Need a logo, banner, or website theme? Get a structured aesthetic and color palette idea instantly!</p>
+                
+                <div class="tool-input-group">
+                    <input type="text" id="design-keyword" placeholder="e.g., Sustainable Coffee Shop" />
+                </div>
+                
+                <button class="tool-button" id="generate-design-brief">
+                    ✨ Generate Design Brief
+                </button>
+                
+                <div class="loading-spinner" id="design-spinner"></div>
+                <div class="result-area" id="design-result">
+                    Design concept and palette will appear here...
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        // --- Gemini API Configuration ---
+        const apiKey = ""; // Canvas environment will inject the key
+        const apiUrlBase = `https://generativelanguage.googleapis.com/v1beta/models/`;
+        const modelName = 'gemini-2.5-flash-preview-09-2025';
+
+        // Placeholder for environment variables
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+
+
+        /**
+         * Generic fetch wrapper with exponential backoff for API resilience.
+         */
+        async function exponentialBackoffFetch(url, options, maxRetries = 3) {
+            let attempt = 0;
+            while (attempt < maxRetries) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.status !== 429 && response.ok) {
+                        return response;
+                    }
+                    if (response.status === 429 || !response.ok) {
+                        attempt++;
+                        if (attempt >= maxRetries) {
+                            throw new Error(`API call failed after ${maxRetries} attempts with status: ${response.status}`);
+                        }
+                        const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                    }
+                } catch (error) {
+                    attempt++;
+                    if (attempt >= maxRetries) {
+                        throw error;
+                    }
+                    const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+
+        // ----------------------------------------------------------------------------------
+        // Feature 1: Cyber Security Analyst (Grounding)
+        // ----------------------------------------------------------------------------------
+
+        document.getElementById('get-security-advice').addEventListener('click', async () => {
+            const query = document.getElementById('security-query').value.trim();
+            const resultDiv = document.getElementById('security-result');
+            const spinner = document.getElementById('security-spinner');
+            const button = document.getElementById('get-security-advice');
+
+            if (!query) {
+                resultDiv.innerHTML = `<span style="color:var(--error-color);">Please enter a security topic!</span>`;
+                return;
+            }
+
+            resultDiv.innerHTML = '';
+            spinner.style.display = 'block';
+            button.disabled = true;
+
+            const url = `${apiUrlBase}${modelName}:generateContent?key=${apiKey}`;
+            const systemPrompt = "Act as a world-class cyber security expert. Provide a concise, actionable summary of the top 3-5 tips related to the user's query. Use clear, direct language and strong formatting (e.g., markdown lists).";
+
+            const payload = {
+                contents: [{ parts: [{ text: query }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    let generatedText = candidate.content.parts[0].text.replace(/\n/g, '<br>');
+                    let sources = [];
+
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attribution => ({
+                                uri: attribution.web?.uri,
+                                title: attribution.web?.title,
+                            }))
+                            .filter(source => source.uri && source.title);
+                    }
+
+                    // Simple markdown to HTML conversion for lists
+                    generatedText = generatedText.replace(/^- /gm, '• ').replace(/<br>\* /gm, '<br>• ');
+
+                    resultDiv.innerHTML = generatedText;
+
+                    if (sources.length > 0) {
+                        let sourceHtml = '<strong>Sources:</strong><br>';
+                        sources.slice(0, 3).forEach((src, index) => { // Limit to top 3
+                            sourceHtml += `<a href="${src.uri}" target="_blank" class="citation">(${index + 1}) ${src.title}</a>`;
+                        });
+                        resultDiv.innerHTML += `<div style="margin-top: 15px;">${sourceHtml}</div>`;
+                    }
+                } else {
+                    resultDiv.innerHTML = `<span style="color:var(--error-color);">Could not generate advice. Please try a different query.</span>`;
+                    console.error("API response error:", result);
+                }
+
+            } catch (error) {
+                resultDiv.innerHTML = `<span style="color:var(--error-color);">An error occurred: ${error.message}.</span>`;
+                console.error("Fetch error:", error);
+            } finally {
+                spinner.style.display = 'none';
+                button.disabled = false;
+            }
+        });
+
+        // ----------------------------------------------------------------------------------
+        // Feature 2: AI Chatbot Idea Generator (Structured JSON Output)
+        // ----------------------------------------------------------------------------------
+
+        document.getElementById('generate-chatbot-ideas').addEventListener('click', async () => {
+            const goal = document.getElementById('chatbot-goal').value.trim();
+            const resultDiv = document.getElementById('chatbot-result');
+            const spinner = document.getElementById('chatbot-spinner');
+            const button = document.getElementById('generate-chatbot-ideas');
+
+            if (!goal) {
+                resultDiv.innerHTML = `<span style="color:var(--error-color);">Please enter your business goal!</span>`;
+                return;
+            }
+
+            resultDiv.innerHTML = '';
+            spinner.style.display = 'block';
+            button.disabled = true;
+
+            const url = `${apiUrlBase}${modelName}:generateContent?key=${apiKey}`;
+            const userQuery = `Given the business goal: "${goal}", generate 3 unique, high-value AI Chatbot concepts.`;
+            const systemPrompt = "You are a senior AI solutions architect. Your task is to generate innovative and practical AI chatbot concepts based on a user's business goal. Ensure the output strictly adheres to the provided JSON schema.";
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "ARRAY",
+                        items: {
+                            type: "OBJECT",
+                            properties: {
+                                "conceptName": { "type": "STRING", "description": "A catchy, professional name for the chatbot concept." },
+                                "targetAudience": { "type": "STRING", "description": "Who will primarily use this chatbot?" },
+                                "coreFunctions": {
+                                    "type": "ARRAY",
+                                    "description": "3-4 main high-level capabilities of the chatbot.",
+                                    "items": { "type": "STRING" }
+                                }
+                            },
+                            "propertyOrdering": ["conceptName", "targetAudience", "coreFunctions"]
+                        }
+                    }
+                }
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                let jsonText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (jsonText) {
+                    const ideas = JSON.parse(jsonText);
+                    let htmlOutput = '<strong>Generated Chatbot Concepts:</strong><hr style="border-color: var(--accent-color);">';
+
+                    ideas.forEach((idea, index) => {
+                        const functionsList = idea.coreFunctions.map(f => `<li>${f}</li>`).join('');
+                        htmlOutput += `
+                            <div class="design-concept">
+                                <h3>${index + 1}. <strong>${idea.conceptName}</strong></h3>
+                                <p><strong>Target Audience:</strong> ${idea.targetAudience}</p>
+                                <strong>Key Features:</strong>
+                                <ul>${functionsList}</ul>
+                            </div>
+                        `;
+                    });
+                    resultDiv.innerHTML = htmlOutput;
+                } else {
+                    resultDiv.innerHTML = `<span style="color:var(--error-color);">Failed to generate ideas. The response was empty.</span>`;
+                    console.error("API response error:", result);
+                }
+
+            } catch (error) {
+                resultDiv.innerHTML = `<span style="color:var(--error-color);">An error occurred: ${error.message}. Please check the console for details.</span>`;
+                console.error("Fetch error:", error);
+            } finally {
+                spinner.style.display = 'none';
+                button.disabled = false;
+            }
+        });
+        
+        // ----------------------------------------------------------------------------------
+        // Feature 3: Design Brief Generator (Structured JSON Output)
+        // ----------------------------------------------------------------------------------
+
+        document.getElementById('generate-design-brief').addEventListener('click', async () => {
+            const keyword = document.getElementById('design-keyword').value.trim();
+            const resultDiv = document.getElementById('design-result');
+            const spinner = document.getElementById('design-spinner');
+            const button = document.getElementById('generate-design-brief');
+
+            if (!keyword) {
+                resultDiv.innerHTML = `<span style="color:var(--error-color);">Please enter a product or brand keyword!</span>`;
+                return;
+            }
+
+            resultDiv.innerHTML = '';
+            spinner.style.display = 'block';
+            button.disabled = true;
+
+            const url = `${apiUrlBase}${modelName}:generateContent?key=${apiKey}`;
+            const userQuery = `Generate a structured, professional design brief concept based on the keyword: "${keyword}".`;
+            const systemPrompt = "You are a world-class graphics designer specializing in branding. Generate a single, inspiring design concept, strictly adhering to the provided JSON schema. Ensure color codes are valid hex codes.";
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "themeTitle": { "type": "STRING", "description": "A catchy title for the design concept." },
+                            "visualStyle": { "type": "STRING", "description": "The overall aesthetic and mood (e.g., Minimalist, Retro, Industrial, Organic)." },
+                            "primaryColorHex": { "type": "STRING", "description": "Hex code for the primary brand color." },
+                            "secondaryColorHex": { "type": "STRING", "description": "Hex code for the accent/secondary color." },
+                            "fontPairing": { "type": "STRING", "description": "A suggestion for a suitable font pairing (e.g., 'Sans Serif headline with Serif body')." },
+                            "moodDescription": { "type": "STRING", "description": "A short paragraph describing the overall feeling and target emotion." }
+                        },
+                        "propertyOrdering": ["themeTitle", "visualStyle", "primaryColorHex", "secondaryColorHex", "fontPairing", "moodDescription"]
+                    }
+                }
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                let jsonText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (jsonText) {
+                    const brief = JSON.parse(jsonText);
+                    
+                    let htmlOutput = `<strong>Concept: ${brief.themeTitle}</strong><hr style="border-color: var(--accent-color);">
+                        <div class="design-concept">
+                            <p><strong>Visual Style:</strong> ${brief.visualStyle}</p>
+                            <p><strong>Mood:</strong> ${brief.moodDescription}</p>
+                            <p><strong>Font Suggestion:</strong> ${brief.fontPairing}</p>
+
+                            <p><strong>Color Palette:</strong></p>
+                            <div class="color-swatch-container">
+                                <span class="color-swatch" style="background-color: ${brief.primaryColorHex};"></span>
+                                <strong>Primary Color:</strong> ${brief.primaryColorHex}
+                            </div>
+                            <div class="color-swatch-container">
+                                <span class="color-swatch" style="background-color: ${brief.secondaryColorHex};"></span>
+                                <strong>Secondary Color:</strong> ${brief.secondaryColorHex}
+                            </div>
+                        </div>
+                    `;
+                    resultDiv.innerHTML = htmlOutput;
+                } else {
+                    resultDiv.innerHTML = `<span style="color:var(--error-color);">Failed to generate design brief. The response was empty.</span>`;
+                    console.error("API response error:", result);
+                }
+
+            } catch (error) {
+                resultDiv.innerHTML = `<span style="color:var(--error-color);">An error occurred: ${error.message}. Please check the console for details.</span>`;
+                console.error("Fetch error:", error);
+            } finally {
+                spinner.style.display = 'none';
+                button.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
